@@ -98,6 +98,8 @@
 	}
 	.single-product-img {
 	    margin-bottom: 30px;
+      width: 150px;
+      
 	}
 	.single-product-img img {
 	    width: 100%;
