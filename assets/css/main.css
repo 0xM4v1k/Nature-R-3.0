@@ -2076,6 +2076,7 @@ a.video-play-btn {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  margin-top: 80px;
 }
 
 .abt-bg:after {
@@ -2092,6 +2093,7 @@ a.video-play-btn {
 .abt-section .abt-text {
   padding: 50px;
   padding-left: 30px;
+  padding-top: 80px;
 }
 
 .abt-text p {
