@@ -140,3 +140,28 @@ function comprarCarrito() {
     contenedorCarritoComprado.classList.remove("disabled");
 
 }
+
+function enviarWhatsApp() {
+  // Verificar si hay productos en el carrito
+  if (productosEnCarrito.length === 0) {
+    alert("El carrito está vacío");
+    return;
+  }
+
+  // Obtener los detalles de los productos en el carrito
+  let mensaje =
+    "Saludos. Estoy interesado en comprar los siguientes productos, ¿podría ayudarme con el proceso?\n";
+  productosEnCarrito.forEach((producto, index) => {
+    mensaje += `${index + 1}. ${producto.titulo} - Cantidad: ${
+      producto.cantidad
+    }\n`;
+  });
+
+  // Generar el enlace de WhatsApp con el mensaje
+  const enlaceWhatsApp = `https://wa.me/51915950393?text=${encodeURIComponent(
+    mensaje
+  )}`;
+
+  // Abrir el enlace en una nueva pestaña
+  window.open(enlaceWhatsApp, "_blank");
+}
