@@ -103,26 +103,3 @@ signinBtn.onclick = function () {
   body.classList.remove("active");
 };
 
-signinBtn.onclick = function () {
-  const username = document.querySelector(
-    ".signinFrom input[type='text']"
-  ).value;
-  const password = document.querySelector(
-    ".signinFrom input[type='password']"
-  ).value;
-
-  // Verificar si los datos ingresados coinciden con los datos registrados
-  const user = usersData.find(
-    (user) => user.name === username && user.password === password
-  );
-
-  if (user) {
-    // Aquí puedes redirigir al usuario a la página deseada después del inicio de sesión exitoso
-    alert("Inicio de sesión exitoso");
-    // Redirigir al usuario a otra página
-    window.location.href = "index.html";
-  } else {
-    // Aquí puedes mostrar un mensaje de error o realizar otra acción en caso de credenciales inválidas
-    alert("Credenciales inválidas. Inténtalo de nuevo.");
-  }
-};
