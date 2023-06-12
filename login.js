@@ -13,13 +13,7 @@ function validateLoginForm(username, password) {
     (user) => user.name === username && user.password === password
   );
 
-  if (user) {
-    // Los datos son válidos
-    return true;
-  } else {
-    // Los datos no son válidos
-    return false;
-  }
+  return user;
 }
 
 // Obtener los valores de usuario y contraseña del formulario
@@ -41,7 +35,9 @@ loginForm.addEventListener("submit", function (event) {
     // Los datos son válidos
     alert("Inicio de sesión exitoso");
     // Redirigir al usuario a otra página
-    window.location.href = "index.html";
+    window.location.href = "index-sesion.html";
+    // Guardar el nombre del usuario en el LocalStorage
+    localStorage.setItem("username", user.name);
   } else {
     // Los datos no son válidos
     alert("Credenciales inválidas. Inténtalo de nuevo.");
@@ -53,18 +49,18 @@ saveBtn.addEventListener("click", function handlerClick(event) {
   event.preventDefault();
 
   //----Input Value Collect
-  let nameValue, email, password, confirmPassword;
+  let nameValue, email, password, address;
   nameValue = document.getElementById("name").value;
   email = document.getElementById("email").value;
   password = document.getElementById("password").value;
-  confirmPassword = document.getElementById("confirmPassword").value;
+  address = document.getElementById("address").value;
 
   // Validar campos obligatorios
   if (
     nameValue.trim() === "" ||
     email.trim() === "" ||
     password.trim() === "" ||
-    confirmPassword.trim() === ""
+    address.trim() === ""
   ) {
     alert("Por favor, completa todos los campos.");
     return;
@@ -74,10 +70,10 @@ saveBtn.addEventListener("click", function handlerClick(event) {
   localStorage.setItem("name", nameValue);
   localStorage.setItem("email", email);
   localStorage.setItem("password", password);
-  localStorage.setItem("confirmPassword", confirmPassword);
+  localStorage.setItem("address", address);
 
   // Almacenar los datos en el array usersData
-  usersData.push({ name: nameValue, email, password, confirmPassword });
+  usersData.push({ name: nameValue, email, password, address });
 
   // Guardar los datos actualizados en el LocalStorage
   localStorage.setItem("usersData", JSON.stringify(usersData));
@@ -87,7 +83,7 @@ saveBtn.addEventListener("click", function handlerClick(event) {
     document.getElementById("name").value = "";
     document.getElementById("email").value = "";
     document.getElementById("password").value = "";
-    document.getElementById("confirmPassword").value = "";
+    document.getElementById("address").value = "";
   }
 
   clearForm();
@@ -103,3 +99,11 @@ signinBtn.onclick = function () {
   body.classList.remove("active");
 };
 
+window.addEventListener("DOMContentLoaded", function () {
+  const usernameSpan = document.getElementById("username");
+  const storedUsername = localStorage.getItem("username");
+
+  if (storedUsername) {
+    usernameSpan.textContent = storedUsername;
+  }
+});
