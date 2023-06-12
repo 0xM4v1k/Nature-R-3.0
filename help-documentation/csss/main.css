@@ -154,7 +154,7 @@ main {
 }
 
 .producto-detalles {
-    background-color: grey;
+    background-color: transparent;
     color: #e2e2e2;
     padding: .5rem;
     border-radius: 1rem;
@@ -163,15 +163,17 @@ main {
     display: flex;
     flex-direction: column;
     gap: .25rem;
+    text-align: center;
 }
 
 .producto-titulo {
     font-size: 1rem;
+    text-align: center;
 }
 
 .producto-agregar {
     border: 0;
-    background-color: var(--clr-white);
+    background-color: white;
     color: black;
     padding: .4rem;
     text-transform: uppercase;

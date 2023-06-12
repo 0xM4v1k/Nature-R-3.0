@@ -1,33 +1,12 @@
 [
-    {
-        "id": "abrigo-01",
-        "titulo": "Uva con Noni",
-        "imagen": "help-documentation/img/abrigos/product-img-1.png",
-        "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
-        },
-        "precio": 85
+  {
+    "id": "bebida-01",
+    "titulo": "Nature'R",
+    "imagen": "assets/img/products/product-img-1.png",
+    "categoria": {
+      "nombre": "Bebidas",
+      "id": "bebidas"
     },
-    {
-        "id": "abrigo-02",
-        "titulo": "Noni con Uva",
-        "imagen": "help-documentation/img/abrigos/product-img-1.png",
-        "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
-        },
-        "precio": 70
-    },
-    {
-        "id": "abrigo-03",
-        "titulo": "Limon con Noni",
-        "imagen": "help-documentation/img/abrigos/product-img-1.png",
-        "categoria": {
-            "nombre": "Abrigos",
-            "id": "abrigos"
-        },
-        "precio": 35
-    }
-   
+    "precio": 35
+  }
 ]
