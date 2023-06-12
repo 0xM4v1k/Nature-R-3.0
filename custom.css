@@ -1,0 +1,29 @@
+.user-menu-container {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #051922;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.user-menu-container.show {
+  display: block;
+}
+
+.user-menu li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.user-menu li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.user-menu li a:hover {
+  color: #ff0000;
+}
+
+

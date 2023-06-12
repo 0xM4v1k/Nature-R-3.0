@@ -1,0 +1,12 @@
+[
+  {
+    "id": "bebida-01",
+    "titulo": "Nature'R",
+    "imagen": "assets/img/products/product-img-1.png",
+    "categoria": {
+      "nombre": "Bebidas",
+      "id": "bebidas"
+    },
+    "precio": 35
+  }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+
+<!--Linking Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--Linking Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="login.css">
+
+</head>
+    <body>
+      <button id="homeButton" onclick="window.location.href = 'index.html';">Inicio</button>
+        <div class="container">
+            <div class="blueBg">
+                <div class="box signin">
+                    <h2>¿Tienes una cuenta?</h2>
+                    <button class="signinBtn">Acceder</button>
+                </div>
+                <div class="box signup">
+                    <h2>¿No tienes una cuenta?</h2>
+                    <button class="signupBtn">Registrarse</button>
+                </div>  
+            </div>
+            <div class="fromBx">
+                <div class="form signinFrom">
+                    <form>
+                        <h3>Acceder</h3>
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <input type="submit" value="Login">
+                    </form>
+                </div>
+
+                <div class="form signupFrom">
+                    <form>
+                        <h3>Registrarse</h3>
+                        <input type="text" id="name" placeholder="Username">
+                        <input type="text" id="email" placeholder="Email Address">
+                        <input type="password" id="password" placeholder="Password">
+                        <input type="text" id="address" placeholder="Address">
+                        <input type="submit"  id="save_btn" value="Register">
+                    </form>
+                </div>
+            </div>       
+        </div>
+
+    <!--Linking Ajax File-->    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Linking Bootstrap File-->    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Linking JS File-->    
+        <script src="login.js"></script>
+    </body>
+</html>
